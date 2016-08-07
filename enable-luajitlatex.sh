@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# Copyright (C) (this script) 2016 Tats.U.
-# This script "itself" is licensed under The MIT License.
+# Copyright (C) 2016 Tats.U.
+# This script is licensed under The MIT License.
 # https://opensource.org/licenses/MIT
 
 if ! which luajittex > /dev/null; then
@@ -23,7 +23,7 @@ exec $(echo "$0" | sed "s@[^/]\+\$@luajittex@") --fmt=luajitlatex.fmt $*
 EOF
 	chmod +x $LUAJITLATEX
     } && {
-	echo "Successed to enable LuaJITLaTeX."
+	echo "Succeeded to enable LuaJITLaTeX."
 	echo "To use it, execute \`luajitlatex' insted of \`lualatex'."
     } || {
 	echo "Failed to enable LuaJITLaTeX.">&2
