@@ -14,14 +14,16 @@ if ! kpsewhich fmtutil.cnf > /dev/null; then
 fi
 LUAJITLATEX=`which luajittex | sed 's/tex$/latex/'`
 echo `uname -s` `uname -o` | grep -qi 'm\(ingw\|sys\)' && WINDOWS=1 || WINDOWS=0
-sed -i -e '/luajitlatex/s/^#! //' `kpsewhich fmtutil.cnf` &&
-    fmtutil-sys --byfmt luajitlatex && {
-	[ $WINDOWS = 1 ] ||
+[ $WINDOWS = 1 ] && ! ( echo $LUAJITLATEX | grep -q '\.exe$' ) && LUAJITLATEX="${LUAJITLATEX}.exe"
+sed -i -e '/luajitlatex/s/^#! //' `kpsewhich fmtutil.cnf` && {
+    fmtutil-sys --byfmt luajitlatex &&
+	[ $WINDOWS = 1 ] || {
 	    cat > $LUAJITLATEX <<"EOF" &&
 #!/bin/sh
 exec $(echo "$0" | sed "s@[^/]\+\$@luajittex@") --fmt=luajitlatex.fmt $*
 EOF
-	chmod +x $LUAJITLATEX
+	    chmod +x $LUAJITLATEX
+	}
     } && {
 	echo "Successed to enable LuaJITLaTeX."
 	echo "To use it, execute \`luajitlatex' insted of \`lualatex'."
