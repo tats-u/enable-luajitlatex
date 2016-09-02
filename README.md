@@ -7,13 +7,13 @@ This is a shell script for enabling LuaJITLaTeX.  LuaJITLaTeX is a mixture of Lu
 Just execute by sh by the root user.
 
 ``` bash
-sudo sh ./enable-luajitlatex
+curl -LsSf https://raw.githubusercontent.com/tats-u/enable-luajitlatex/master/enable-luajitlatex.sh | sudo PATH="$PATH" sh
 ```
 
 ### Windows
 This cannot be executed by the cmd or the PowerShell.  First, run Git Bash or Msys2 **with the administrator's privilege.**  Second, execute this script by these shells.
 
 ``` bash
-./enable-luajitlatex
+curl -LsSf https://raw.githubusercontent.com/tats-u/enable-luajitlatex/master/enable-luajitlatex.sh | sh
 ```
 
