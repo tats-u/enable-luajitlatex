@@ -20,7 +20,7 @@ sed -i -e '/luajitlatex/s/^#! //' `kpsewhich fmtutil.cnf` && {
 	[ $WINDOWS = 1 ] || {
 	    cat > $LUAJITLATEX <<"EOF" &&
 #!/bin/sh
-exec $(echo "$0" | sed "s@[^/]\+\$@luajittex@") --fmt=luajitlatex.fmt $*
+exec $(echo "$0" | sed "s@[^/]\+\$@luajittex@") --fmt=luajitlatex.fmt "$@"
 EOF
 	    chmod +x $LUAJITLATEX
 	}
