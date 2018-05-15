@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Copyright (C) 2016 Tats.U.
+# Copyright (C) 2016 Tatsunori Uchino
 # This script is licensed under The MIT License.
 # https://opensource.org/licenses/MIT
 
