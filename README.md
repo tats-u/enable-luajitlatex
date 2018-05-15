@@ -26,7 +26,7 @@ Execute the following command **with the administrator's privilege:**
 ```
 
 #### Using Git Bash
-First, run Git Bash **with the administrator's privilege.**  Second, execute this script by these shells.
+First, run Git Bash **with the administrator's privilege.**  Second, execute the following command:
 
 ``` bash
 curl -LsSf https://raw.githubusercontent.com/tats-u/enable-luajitlatex/master/enable-luajitlatex.sh | sh
