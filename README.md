@@ -11,7 +11,22 @@ curl -LsSf https://raw.githubusercontent.com/tats-u/enable-luajitlatex/master/en
 ```
 
 ### Windows
-This cannot be executed by the cmd or the PowerShell.  First, run Git Bash or Msys2 **with the administrator's privilege.**  Second, execute this script by these shells.
+#### Using PowerShell
+Execute the following command **with the administrator's privilege:**
+
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString("https://raw.githubusercontent.com/tats-u/enable-luajitlatex/master/enable-luajitlatex.ps1"))
+```
+
+#### Using CMD
+Execute the following command **with the administrator's privilege:**
+
+```bat
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/tats-u/enable-luajitlatex/master/enable-luajitlatex.ps1'))"
+```
+
+#### Using Git Bash
+First, run Git Bash **with the administrator's privilege.**  Second, execute this script by these shells.
 
 ``` bash
 curl -LsSf https://raw.githubusercontent.com/tats-u/enable-luajitlatex/master/enable-luajitlatex.sh | sh
