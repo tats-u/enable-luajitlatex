@@ -1,6 +1,11 @@
 # Enable LuaJITLaTeX
+
+## ⚠IMPORTANT⚠
+
+LuaJITLaTeX is not provided for TeXLive ≥2019.  This script is only for users using TeXLive ≤2018.
+
 ## What's this?
-This is a shell script for enabling LuaJITLaTeX.  LuaJITLaTeX is a mixture of LuaLaTeX and JIT. (or LaTeX and LuaJITTeX)  It works faster than LuaLaTeX in many cases.
+This is a shell script for enabling LuaJITLaTeX.  LuaJITLaTeX is a mixture of LuaLaTeX and JIT. (or LaTeX and LuaJITTeX) provided in TeXLive ≤2018.  It works faster than LuaLaTeX in many cases.
 
 ## How to use
 ### Unix-like OSs
